@@ -10,14 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class CoursesComponent {
   
-  courses: Observable<Course[]>;
+  courses$: Observable<Course[]>;
   displayedColumns = ['name', 'category'];
 
   constructor(private coursesSerivice: CoursesService){
-    this.courses = this.coursesSerivice.findAllCourses();
+    this.courses$ = this.coursesSerivice.findAllCourses();
   }
 
   ngOnInit(){
-
+    
   }
 }
